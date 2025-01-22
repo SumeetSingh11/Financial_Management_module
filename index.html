@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Planning & Investment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://monitoring.arunachal.gov.in/static/img/Arunachal_Pradesh_Seal.6255e81.png" alt="Logo" class="d-inline-block align-text-top">
+                DEPARTMENT OF PLANNING & INVESTMENT
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="bi bi-cash-coin"></i> FMM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-question-circle"></i> Help</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person-circle"></i> Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid main-content">
+        <h5>Filters & Search</h5>
+        
+        <!-- Filters -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-3">
+                <label>District</label>
+                <select class="form-select">
+                    <option>Select District</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label>Circle</label>
+                <select class="form-select">
+                    <option>Select Circle</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label>Status</label>
+                <select class="form-select">
+                    <option>Select Status</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label>Unique Project ID</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <label>Source of Funding</label>
+                <select class="form-select">
+                    <option>Select Funding</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label>Executing Department</label>
+                <select class="form-select">
+                    <option>Select Department</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label>Start Date</label>
+                <input type="date" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <label>End Date</label>
+                <input type="date" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label>Search by Name, Mobile or Email</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label>Structure Type</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-12 text-end">
+                <button class="btn btn-primary"><i class="bi bi-search"></i> Search</button>
+                <button class="btn btn-secondary"><i class="bi bi-arrow-clockwise"></i> Reset</button>
+                <button class="btn btn-success"><i class="bi bi-file-excel"></i> Export Excel</button>
+            </div>
+        </div>
+
+        <!-- Project Table -->
+        <div class="section-header" style="background-color: #343a40; color: white; display: flex; justify-content: space-between; align-items: center;">
+            <div class="section-title" style="color: white;">Project List</div>
+            <div class="action-icons" style="display: none;"></div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th style="color: black;">Project ID</th>
+                        <th style="color: black;">Project Name</th>
+                        <th style="color: black;">District</th>
+                        <th style="color: black;">Circle</th>
+                        <th style="color: black;">Department</th>
+                        <th style="color: black;">Financial Progress</th>
+                        <th style="color: black;">Physical Progress</th>
+                        <th style="color: black;">Status</th>
+                        <th style="color: black;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="projectTableBody">
+                    <!-- Data will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
